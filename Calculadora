@@ -1,0 +1,39 @@
+#Treinando python com vscode, tentativa de criar uma calculadora simples.
+
+PrimeiroValor = 0
+SegundoValor = 0
+ValorFinal = 0
+Funcao = 0
+PrimeiroValor = int(input("Escolha um valor:"))
+
+Funcao = int(input("escolha uma opção     [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:      ")
+             )
+while Funcao > 4:
+    print("Tente novamente")
+    Funcao = int(input("escolha uma opção       [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:     ")
+                 )
+while Funcao < 1:
+    print("Tente novamente")
+    Funcao = int(input("escolha uma opção       [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:     ")
+                 )
+
+SegundoValor = int(input("Escolha um segundo valor:"))
+
+if Funcao == 1:
+    ValorFinal = PrimeiroValor + SegundoValor
+    print("A soma dos valores é" +" "+ str( ValorFinal))
+elif Funcao == 2:
+    ValorFinal = PrimeiroValor - SegundoValor
+    print("A subtração dos valores é" +" "+ str( ValorFinal))
+elif Funcao == 3:
+    ValorFinal = PrimeiroValor / SegundoValor
+    print("A divisão dos valores é" +" "+ str( ValorFinal))
+elif Funcao == 4:
+    ValorFinal = PrimeiroValor * SegundoValor
+    print("A multiplicação dos valores é" +" "+ str( ValorFinal))
+else:
+    print("Erro")
+
+    
+
+    

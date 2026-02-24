@@ -25,6 +25,9 @@ if Funcao == 1:
 elif Funcao == 2:
     ValorFinal = PrimeiroValor - SegundoValor
     print("A subtração dos valores é" +" "+ str( ValorFinal))
+# Um colega pediu pra dividir um numero por 0 e deu erro, então estou criando uma saida para o codigo
+elif Funcao == 3 and SegundoValor == 0:
+    print("Impossível fazer divisão por 0")
 elif Funcao == 3:
     ValorFinal = PrimeiroValor / SegundoValor
     print("A divisão dos valores é" +" "+ str( ValorFinal))
@@ -34,6 +37,6 @@ elif Funcao == 4:
 else:
     print("Erro")
 
-    
+
 
     

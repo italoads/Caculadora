@@ -4,7 +4,7 @@ PrimeiroValor = 0
 SegundoValor = 0
 ValorFinal = 0
 Funcao = 0
-PrimeiroValor = int(input("Escolha um valor:"))
+PrimeiroValor = float(input("Escolha um valor:"))
 
 Funcao = int(input("escolha uma opção     [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:      ")
              )
@@ -17,7 +17,7 @@ while Funcao < 1:
     Funcao = int(input("escolha uma opção       [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:     ")
                  )
 
-SegundoValor = int(input("Escolha um segundo valor:"))
+SegundoValor = float(input("Escolha um segundo valor:"))
 
 if Funcao == 1:
     ValorFinal = PrimeiroValor + SegundoValor

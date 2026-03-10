@@ -37,6 +37,8 @@ elif Funcao == 4:
 else:
     print("Erro")
 
+Resposta = int(input("deseja continuar?  [1] Sim  [2] Não:   " ))   
+
+while resposta == 1
 
 
-    

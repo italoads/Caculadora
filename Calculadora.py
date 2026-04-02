@@ -1,44 +1,40 @@
-#Treinando python com vscode, tentativa de criar uma calculadora simples.
+# testando def
+def calcular(v1, v2, operacao):
+    if operacao == 1:
+        res = v1 + v2
+        print(f"A soma é: {res}")
+    elif operacao == 2:
+        res = v1 - v2
+        print(f"A subtração é: {res}")
+    elif operacao == 3:
+        if v2 == 0:
+            print("Erro: Divisão por zero!")
+            return v1 
+        res = v1 / v2
+        print(f"A divisão é: {res}")
+    elif operacao == 4:
+        res = v1 * v2
+        print(f"A multiplicação é: {res}")
+    else:
+        print("Opção inválida")
+        return v1
+    return res
 
-PrimeiroValor = 0
-SegundoValor = 0
-ValorFinal = 0
-Funcao = 0
-PrimeiroValor = float(input("Escolha um valor:"))
+# --- Começo ---
+valor_acumulado = float(input("Digite o 1º valor: "))
+continuar = 's'
 
-Funcao = int(input("escolha uma opção     [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:      ")
-             )
-while Funcao > 4:
-    print("Tente novamente")
-    Funcao = int(input("escolha uma opção       [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:     ")
-                 )
-while Funcao < 1:
-    print("Tente novamente")
-    Funcao = int(input("escolha uma opção       [1] Somar [2] Subtrair [3] Dividir [4] Multiplicar:     ")
-                 )
+while continuar.lower() == 's':
+    print("\n[1] Somar [2] Subtrair [3] Dividir [4] Multiplicar")
+    opcao = int(input("Escolha a função: "))
+    proximo_valor = float(input("Digite o próximo valor: "))
 
-SegundoValor = float(input("Escolha um segundo valor:"))
+    valor_acumulado = calcular(valor_acumulado, proximo_valor, opcao)
+    
+    print(f"Valor atual: {valor_acumulado}")
+    
+    continuar = input("\nDeseja realizar outra operação? [s/n]: ").lower()
+    while continuar not in ('s', 'n'):
+        continuar = input("Por favor, responda apenas [s] ou [n]: ").lower()
 
-if Funcao == 1:
-    ValorFinal = PrimeiroValor + SegundoValor
-    print("A soma dos valores é" +" "+ str( ValorFinal))
-elif Funcao == 2:
-    ValorFinal = PrimeiroValor - SegundoValor
-    print("A subtração dos valores é" +" "+ str( ValorFinal))
-# Um colega pediu pra dividir um numero por 0 e deu erro, então estou criando uma saida para o codigo
-elif Funcao == 3 and SegundoValor == 0:
-    print("Impossível fazer divisão por 0")
-elif Funcao == 3:
-    ValorFinal = PrimeiroValor / SegundoValor
-    print("A divisão dos valores é" +" "+ str( ValorFinal))
-elif Funcao == 4:
-    ValorFinal = PrimeiroValor * SegundoValor
-    print("A multiplicação dos valores é" +" "+ str( ValorFinal))
-else:
-    print("Erro")
-
-Resposta = int(input("deseja continuar?  [1] Sim  [2] Não:   " ))   
-
-while resposta == 1
-
-
+print("Obrigado por testar minha calculadora :)")
